@@ -4,7 +4,7 @@ import string
 import sys
 
 def prompt(myName):
-    # myName is a string which will be an alias for the client (used just for display)
+    # dislay name for client
     sys.stdout.write('<' + myName + '> ')
     sys.stdout.flush()
 

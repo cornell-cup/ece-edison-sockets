@@ -12,8 +12,6 @@ def server_details(sock):
         msg = '\r' + 'Server name: ' + server_name + '\n'
         msg += 'Server version: ' + str(server_version) +'\n' 
         sock.sendall(msg) 
-        #sock.sendall('\r' + 'Server name: ' + server_name + '\n' + 'Server version: ' + str(server_version))
-        #sock.send('Server version: ' + str(server_version))# + '/r/n')
     except:
         # broken socket connection 
         sock.close()
@@ -103,14 +101,6 @@ if __name__ == "__main__":
                 try:
                     data = sock.recv(RECV_BUFFER)
                     parse_msg(sock, data)
-                    #if 'server data' in data:
-                    #    server_details(sock)
-                    #if 'read_pin' in data:
-                    #    aRead = read_pin(11)
-                    #    sock.send('Pin value ' + str(aRead))
-                    #else: 
-                    #    sock.send('This is what you sent: ' + data)
-                    #    #server_details(sock)
                 except: 
                     print "Client (%s, %s) is offline" % addr
                     sock.close()
