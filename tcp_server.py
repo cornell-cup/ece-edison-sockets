@@ -2,7 +2,7 @@
 import socket
 import select
 import thread 
-import mraa
+#import mraa
 
 def server_details(sock):
     # Send details about this server to the appropriate socket 
